@@ -1,24 +1,12 @@
-import {
-  ThemeProvider, //
-  createTheme,
-  useMediaQuery,
-} from "@mui/material";
-import './App.css';
+import "./App.css";
+import Footer from "./components/Footer/Footer";
 
 function App() {
-  const prefersDarkMode = useMediaQuery("(prefers-color-scheme: dark)");
-
-  const theme = createTheme({
-    palette: {
-      mode: prefersDarkMode ? "dark" : "light",
-    },
-  });
 
   return (
     <>
-      <ThemeProvider theme={theme}>
-        {/* TODO: */}
-      </ThemeProvider>
+      {/* TODO: */}
+      <Footer />
     </>
   );
 }
