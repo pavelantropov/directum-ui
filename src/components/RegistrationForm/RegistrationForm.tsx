@@ -17,6 +17,11 @@ function RegistrationForm() {
   };
 
   const handlePost = () => {
+    if (fullName.length == 0 || job.length == 0 || email.length == 0) {
+      alert("Пожалуйста, проверьте, что все данные заполнены перед отправкой.");
+      return;
+    }
+
     alert(`Вы зарегистрированы на мероприятие. Ваши данные:\n\nФИО: ${fullName}\nМесто работы: ${job}\nE-mail: ${email}`);
   };
 

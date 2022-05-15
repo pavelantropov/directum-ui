@@ -1,4 +1,5 @@
 import { Grid } from "@mui/material";
+import { useState } from "react";
 import "./App.css";
 import Banner from "./components/Banner/Banner";
 import Footer from "./components/Footer/Footer";
@@ -6,10 +7,11 @@ import RegistrationForm from "./components/RegistrationForm/RegistrationForm";
 import Text from "./components/Text/Text";
 
 function App() {
+  const [isRegistrationFormOpen, setIsRegistrationFormOpen] = useState(false);
 
   return (
     <>
-      <Banner />
+      <Banner {...{isRegistrationFormOpen, setIsRegistrationFormOpen}} />
       <Grid container spacing={3} sx={{
         justifyContent: "center",
         textAlign: "center",
@@ -19,9 +21,12 @@ function App() {
         <Grid item xs={12} md={5}>
           <Text />
         </Grid>
-        <Grid item xs={12} md={5}>
-          <RegistrationForm />
-        </Grid>
+        {
+          isRegistrationFormOpen &&
+          <Grid item xs={12} md={5}>
+            <RegistrationForm />
+          </Grid>
+        }
       </Grid>
       <Footer />
     </>
