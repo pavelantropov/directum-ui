@@ -1,4 +1,4 @@
-import { Grid } from "@mui/material";
+import { Grid, Stack } from "@mui/material";
 import { useState } from "react";
 import "./App.css";
 import Banner from "./components/Banner/Banner";
@@ -13,28 +13,35 @@ function App() {
 
   return (
     <>
-      <Banner {...{isRegistrationFormOpen, setIsRegistrationFormOpen}} />
-      <Grid container spacing={3} sx={{
-        justifyContent: "center",
-        textAlign: "center",
-        bgcolor: "#F8F9FA",
-        padding: "2rem 1rem"
-      }}>
-        <Grid item xs={12} md={5} paddingX={2}>
-          <Text />
-        </Grid>
-        {
-          isRegistrationFormOpen &&
+      <Stack
+        direction="column"
+        justifyContent="space-between"
+        alignItems="center"
+        minHeight="100vh"
+      >
+        <Banner {...{isRegistrationFormOpen, setIsRegistrationFormOpen}} />
+        <Grid container spacing={3} sx={{
+          justifyContent: "center",
+          textAlign: "center",
+          bgcolor: "#F8F9FA",
+          padding: "2rem 1rem"
+        }}>
           <Grid item xs={12} md={5} paddingX={2}>
-            <RegistrationForm />
+            <Text />
           </Grid>
-        }
-      </Grid>
-      <Table {...{
-        title: "Наши спикеры",
-        items: DefaultTableItems
-      }} />
-      <Footer />
+          {
+            isRegistrationFormOpen &&
+            <Grid item xs={12} md={5} paddingX={2}>
+              <RegistrationForm />
+            </Grid>
+          }
+        </Grid>
+        <Table {...{
+          title: "Наши спикеры",
+          items: DefaultTableItems
+        }} />
+        <Footer />
+      </Stack>
     </>
   );
 }

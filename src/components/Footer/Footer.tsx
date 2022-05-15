@@ -2,9 +2,10 @@ import { Paper, Typography } from "@mui/material";
 import logoFooter from "../../images/logoFooter.png";
 
 function Footer() {
+  const currentYear = new Date().getFullYear();
+
   return (
     <>
-      {/* TODO:  */}
       <Paper square sx={{
         position: "relative",
         bottom: 0,
@@ -16,7 +17,7 @@ function Footer() {
       }}>
         <img src={logoFooter} />
         <Typography>
-          <small>© DIRECTUM, 2022</small>
+          <small>© DIRECTUM, {currentYear}</small>
         </Typography>
       </Paper>
     </>

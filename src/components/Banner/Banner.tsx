@@ -18,7 +18,8 @@ function Banner({ isRegistrationFormOpen, setIsRegistrationFormOpen }: Props) {
         textAlign: "center", 
         color: "#FFFFFF",
         bgcolor: "#17A2B8",
-        padding: "10rem 0 10rem 0"
+        padding: "8rem 0 10rem 0",
+        width: "100%",
       }}>
         <img src={logoBanner} />
         <Typography variant="h4" component="h1" marginTop={5}>
