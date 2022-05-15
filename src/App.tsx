@@ -1,7 +1,8 @@
-import { Paper } from "@mui/material";
+import { Grid } from "@mui/material";
 import "./App.css";
 import Banner from "./components/Banner/Banner";
 import Footer from "./components/Footer/Footer";
+import RegistrationForm from "./components/RegistrationForm/RegistrationForm";
 import Text from "./components/Text/Text";
 
 function App() {
@@ -9,13 +10,19 @@ function App() {
   return (
     <>
       <Banner />
-      <Paper square sx={{
+      <Grid container spacing={3} sx={{
+        justifyContent: "center",
         textAlign: "center",
         bgcolor: "#F8F9FA",
-        padding: "2rem 0 2rem 0"
+        padding: "2rem 1rem"
       }}>
-        <Text />
-      </Paper>
+        <Grid item xs={12} md={5}>
+          <Text />
+        </Grid>
+        <Grid item xs={12} md={5}>
+          <RegistrationForm />
+        </Grid>
+      </Grid>
       <Footer />
     </>
   );
