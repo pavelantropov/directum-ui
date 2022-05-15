@@ -3,7 +3,7 @@ import { useState } from "react";
 import "./App.css";
 import Banner from "./components/Banner/Banner";
 import Footer from "./components/Footer/Footer";
-import { DefaultTableItems } from "./components/mockData/mockData";
+import { DefaultTableItems } from "./mockData/mockData";
 import RegistrationForm from "./components/RegistrationForm/RegistrationForm";
 import Table from "./components/Table/Table";
 import Text from "./components/Text/Text";

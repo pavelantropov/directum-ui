@@ -1,5 +1,5 @@
-import { TableItemType } from "../Table/types";
-import pikachuImage from "../../images/pikachu.png";
+import { TableItemType } from "../components/Table/types";
+import pikachuImage from "../images/pikachu.png";
 
 const defaultName = "Детектив пикачу";
 const defaultDescription = "уморительный, остроумный и обаятельный сыщик";
