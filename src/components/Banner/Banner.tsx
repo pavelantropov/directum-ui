@@ -1,6 +1,7 @@
 import { Button, Paper, Typography } from "@mui/material";
 import logoBanner from "../../images/logoBanner.png";
-import React from "react";
+import { DefaultMenuItems } from "../../mockData/mockData";
+import Menu from "../Menu/Menu";
 
 interface Props {
   isRegistrationFormOpen: boolean;
@@ -20,21 +21,23 @@ function Banner({ isRegistrationFormOpen, setIsRegistrationFormOpen }: Props) {
         padding: "10rem 0 10rem 0"
       }}>
         <img src={logoBanner} />
-        <Typography variant="h4" component="h1" paddingTop={5}>
+        <Typography variant="h4" component="h1" marginTop={5}>
           НАЗВАНИЕ МЕРОПРИЯТИЯ
         </Typography>
-        <Typography variant="h5" paddingTop={4}>
+        <Typography variant="h5" marginTop={4}>
           4 МАЯ 2049
         </Typography>
-        <Typography variant="h5" paddingY={3}>
+        <Typography variant="h5" marginY={3}>
           в самом сердце страны
         </Typography>
-        <Button 
+        <Button
           variant="contained" 
           onClick={handleRegistrationClick} 
-          size="large">
+          size="large"
+          sx={{marginBottom: 2}}>
           Регистрация
         </Button>
+        <Menu {...{items: DefaultMenuItems}} />
       </Paper>
     </>
   );

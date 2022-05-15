@@ -33,7 +33,6 @@ function Table({
                 {...item}
               />
             </Grid>
-            
           ))}
         </Grid>
       </Container>
