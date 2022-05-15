@@ -4,14 +4,15 @@ import logoFooter from "../../images/logoFooter.png";
 function Footer() {
   return (
     <>
+      {/* TODO:  */}
       <Paper square sx={{
-        position: "fixed",
+        position: "relative",
         bottom: 0,
         width: "100%",
         textAlign: "center", 
         color: "#BABABA",
         bgcolor: "#F8F9FA",
-        padding: "2rem 0 2rem 0"
+        padding: "2rem 0"
       }}>
         <img src={logoFooter} />
         <Typography>
